@@ -1,7 +1,6 @@
 import { FastifyInstance } from 'fastify'
 import { prisma } from '../lib/prisma'
 import z from 'zod'
-import { REPL_MODE_SLOPPY } from 'repl'
 
 export async function memoriesRoutes(app: FastifyInstance) {
     app.addHook('preHandler', async (request) => {//para a autenticação valer para todas as rotas
