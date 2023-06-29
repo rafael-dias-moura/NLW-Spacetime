@@ -42,12 +42,15 @@ export default function Layout() {
             <StyledStripes className='absolute left-2' />
             <StatusBar style="light" translucent />
 
-            <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: 'transparent' }, }}>{/* para navegação ""animada"entre as paginas, carrega pa pag. home(index.tsx) */}
-                <Stack.Screen  />
-                <Stack.Screen />
-                <Stack.Screen />
-            
+            <Stack
+                screenOptions={{
+                    headerShown: false,
+                    contentStyle: { backgroundColor: 'transparent' },
+                }}>{/* para navegação ""animada"entre as paginas, carrega pa pag. home(index.tsx) */}
+                <Stack.Screen name='index' redirect={isUserAuthenticated} />
+                <Stack.Screen name='new' />
+                <Stack.Screen name='memories' />
             </Stack>
-       </ImageBackground>
+        </ImageBackground>
     )
 } 
