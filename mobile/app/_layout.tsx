@@ -30,6 +30,7 @@ export default function Layout() {
     useEffect(() => {
         SecureStore.getItemAsync('token').then((token) => {
             setIsUserAuthenticate(!!token)
+            console.log(token)
         })
     }, [])
 
@@ -46,10 +47,11 @@ export default function Layout() {
                 screenOptions={{
                     headerShown: false,
                     contentStyle: { backgroundColor: 'transparent' },
+                    animation: "fade",
                 }}>{/* para navegação ""animada"entre as paginas, carrega pa pag. home(index.tsx) */}
                 <Stack.Screen name='index' redirect={isUserAuthenticated} />
-                <Stack.Screen name='new' />
                 <Stack.Screen name='memories' />
+                <Stack.Screen name='new' />
             </Stack>
         </ImageBackground>
     )
