@@ -21,7 +21,8 @@ export async function memoriesRoutes(app: FastifyInstance) {
             return {
                 id: memory.id,
                 coverUrl: memory.coverUrl,
-                except: memory.content.substring(0, 115).concat('...')
+                excerpt: memory.content.substring(0, 115).concat('...'),
+                createdAt: memory.createdAt,
             }
         })
     })
@@ -39,7 +40,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
             },
         })
 
-        if(!memory.isPublic && memory.userId != request.user.sub) {
+        if (!memory.isPublic && memory.userId != request.user.sub) {
             return reply.status(401).send()
         }
 
@@ -65,7 +66,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
         })
     })
 
-    app.put('/memories/:id', async (request,reply) => {
+    app.put('/memories/:id', async (request, reply) => {
         const paramsSchema = z.object({
             id: z.string().uuid()
         })
@@ -103,7 +104,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
         return memory
     })
 
-    app.delete('/memories/:id', async (request,reply) => {
+    app.delete('/memories/:id', async (request, reply) => {
         const paramsSchema = z.object({
             id: z.string().uuid()
         })

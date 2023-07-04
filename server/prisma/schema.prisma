@@ -5,6 +5,10 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator erd {
+  provider = "prisma-erd-generator"
+}
+
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
@@ -16,7 +20,7 @@ model User {
   githubId  Int      @unique
   login     String
   avatarUrl String
-  memories    Memory[]
+  memories  Memory[]
 }
 
 model Memory {
