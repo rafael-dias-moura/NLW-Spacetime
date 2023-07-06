@@ -23,7 +23,7 @@ app.register(cors, {
 })  
 
 app.register(jwt, {
-    secret: 'qualquerstringdoida004932kf0k9jf',
+    secret: 'qualquerstring004932kf0k9jf',
 })
 
 app.register(authRoutes)
