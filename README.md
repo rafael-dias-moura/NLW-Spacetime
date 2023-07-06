@@ -17,7 +17,7 @@ Projeto desenvolvido durante o NLW 12, produzido pela Rocketseat, aplicação de
 * Github oauth, JWT
 * CRUD
 * Entity Relationship Diagram(ERD):
-<img src=".server/prisma/migrations/ERD.svg" alt="ERD" />
+<img src=".server/prisma/ERD.svg" alt="ERD" />
 
 ## How to execute:
 
