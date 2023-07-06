@@ -1,7 +1,7 @@
 # NLW-Spacetime
 
 ## About:
-<img src=".github/Thumbnail.png" alt="nlw spacetime" />
+<img src=".github/Thumbnail.png" alt="nlw spacetime" width="800" />
 
 Project developed during NLW 12, produced by Rocketseat, a memory recall application, where the user can add texts, photos and videos of important events in his life to a timeline, organized by month and year.
 
@@ -17,7 +17,7 @@ Projeto desenvolvido durante o NLW 12, produzido pela Rocketseat, aplicação de
 * Github oauth, JWT
 * CRUD
 * Entity Relationship Diagram(ERD):
-<img src=".server/prisma/ERD.svg" alt="ERD" />
+<img src=".github/ERD.svg" alt="ERD" width="200"/>
 
 ## How to execute:
 
@@ -47,7 +47,7 @@ This project under MIT license. See [LICENSE](LICENSE.md) for more details.
 ---
 
 <h5 align="center">
-  &copy;2022 - <a href="https://github.com/rafael-dias-moura">Rafael Dias</a>
+  &copy;2023 - <a href="https://github.com/rafael-dias-moura">Rafael Dias</a>
 </h5>
 
  
